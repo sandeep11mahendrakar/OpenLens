@@ -1,0 +1,64 @@
+openlens/
+│
+├── README.md                          # Detailed with architecture diagrams
+├── requirements.txt
+├── setup.py
+├── .env.example                       # Reddit API keys template
+├── Dockerfile
+├── docker-compose.yml
+│
+├── intent_classifier/
+│   ├── __init__.py
+│   ├── dataset_builder.py             # Training data generation
+│   ├── model.py                       # Classifier training + inference
+│   └── experiments/                   # Jupyter notebooks for model comparison
+│       └── model_comparison.ipynb
+│
+├── scrapers/
+│   ├── __init__.py
+│   ├── wikipedia_scraper.py           # Wikipedia API + HTML parser
+│   ├── reddit_scraper.py              # PRAW-based Reddit scraper
+│   └── base_scraper.py                # Abstract base class
+│
+├── pipeline/
+│   ├── __init__.py
+│   ├── document_processor.py          # Chunking, embedding, indexing
+│   ├── query_processor.py             # Query expansion, keyword extraction
+│   └── reranker.py                    # Cross-encoder re-ranking (bonus)
+│
+├── synthesis/
+│   ├── __init__.py
+│   └── answer_engine.py               # TextRank + formatting
+│
+├── app/
+│   ├── __init__.py
+│   ├── main.py                        # FastAPI application
+│   └── frontend/                      # Streamlit or React frontend
+│       └── streamlit_app.py
+│
+├── evaluation/
+│   ├── evaluator.py                   # Systematic evaluation suite
+│   ├── results/                       # Saved eval results over time
+│   └── analysis.ipynb                 # Evaluation analysis notebook
+│
+├── data/
+│   ├── intent_dataset.json            # Generated training data
+│   ├── feedback.jsonl                 # User feedback log
+│   └── vector_index/                  # Saved embeddings
+│
+├── models/
+│   └── intent_classifier.joblib       # Saved trained model
+│
+├── tests/
+│   ├── test_classifier.py
+│   ├── test_scrapers.py
+│   ├── test_pipeline.py
+│   └── test_synthesis.py
+│
+├── cache/
+│   └── wikipedia/                     # Cached Wikipedia responses
+│
+└── docs/
+    ├── architecture.md                # System design document
+    ├── evaluation_report.md           # Results and analysis
+    └── improvements.md                # Future work / known limitations
