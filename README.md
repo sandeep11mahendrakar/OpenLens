@@ -1,3 +1,5 @@
+^^still need to build
+
 # **🚀 OpenLens: Building an ML-Powered Research & Answer Engine**
 
 OpenLens is a full-stack **Retrieval-Augmented Generation (RAG)** system designed to replicate the architecture behind industry leaders like Perplexity, Bing Chat, and Google AI Overviews. This project demonstrates proficiency in ML pipelines, data engineering, and production-grade LLM implementation.
